@@ -1,0 +1,1 @@
+define(function(require,exports,module){module.exports={isEmpty:function(c){return""===c||null===c||void 0===c||"null"===c||"undefined"===c},isEmptyObject:function(c){for(var v in c);return void 0===v}}});

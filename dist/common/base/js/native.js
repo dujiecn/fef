@@ -1,0 +1,1 @@
+define(function(require,exports,module){require("./request");module.exports={showLoading:function(){},hideLoading:function(){}}});

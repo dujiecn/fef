@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1.0,minimum-scale=1.0">
+	<title>test page</title>
+	<link rel="stylesheet" href="../../common/base/style/page.css">
+</head>
+<body>
+	
+	
+	<script src="../../common/lib/seajs/sea.js" id="seajsnode"></script>
+	<script src="../../common/base/js/base.js"></script>
+	<script>
+		seajs.use('login',function(login) {
+			$(function() {
+				login(function() {
+					seajs.use(APP_PATH + 'js/app');
+				})
+			});
+		})
+	</script>
+</body>
+</html>

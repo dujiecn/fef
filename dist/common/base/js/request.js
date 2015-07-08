@@ -1,0 +1,1 @@
+define(function(require,exports,module){$.ajaxSetup({type:"GET",timeout:6e4,dataType:"jsonp",error:function(a,c){console.error(c)}}),module.exports={send2native:function(a){setTimeout(function(){window.location.href="native-call?data="+JSON.stringify(a)},300)},send2server:function(a){return $.ajax(a)}}});

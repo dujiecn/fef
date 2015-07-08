@@ -1,0 +1,1 @@
+define(function(require){var c=require("../tpl/t.tpl");console.log(ejs.render(c,{msg:"hello dujie"}))});

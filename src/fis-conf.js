@@ -55,5 +55,5 @@ fis.config.set('settings.optimizer.uglify-js', {
 // 打包插件
 fis.config.set('pack', {
     // 合并base/style下的所有css文件
-    'common/base/style/pageview.css': /common\/base\/style\/.+\.css$/
+    'common/base/style/page.css': /common\/base\/style\/.+\.css$/
 });
