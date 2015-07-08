@@ -1,6 +1,6 @@
 var scripts = document.scripts;
 var baseScriptEl = scripts[scripts.length - 1];
-var baseUrl = baseScriptEl.getAttribute("src").match(/^(\.\.\/)*/g) || "../../";
+var baseUrl = baseScriptEl.getAttribute("src").match(/^(\.\.\/)*/g);
 // 保存app应用的前缀路径（发布应用包的时候应用名称会改变）
 window.APP_PATH = location.pathname.match(/\bapp\/.+\//);
 
