@@ -1,6 +1,5 @@
 <div class="spa-popbox <%=poptype%>">
 	<div class="spa-popbox-container">
-		<div class="spa-popbox-title"><%=title%></div>
 		<div class="spa-popbox-content">
 			<div class="msg">
 				<%=msg%>
@@ -9,9 +8,9 @@
 		<div class="spa-popbox-operate">
 			<%if(poptype == 'alert') {%>
 			<%}else if(poptype == 'confirm'){%>
-				<span class="spa-popbox-button">取消</span>
+				<span class="spa-popbox-button cancel">取消</span>
 			<%}%>
-			<span class="spa-popbox-button">确定</span>
+			<span class="spa-popbox-button submit">确定</span>
 		</div>
 	</div>
 </div>

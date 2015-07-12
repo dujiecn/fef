@@ -1,1 +1,0 @@
-define(function(require){var a=require("loading");a.open()});
