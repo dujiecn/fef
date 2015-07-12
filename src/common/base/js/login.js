@@ -1,3 +1,6 @@
+/*
+	登录模块
+*/
 define(function(require, exports, module) {
 	module.exports = function(callback) {
 		var request = require('./request');

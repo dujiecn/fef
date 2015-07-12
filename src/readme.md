@@ -10,14 +10,4 @@
 # 某些插件默认不支持cmd规范（如：hammer等），需要手动添加cmd规范支持
 
 
-# 头部导航
-	<header class="navbar">
-		<nav class="navbar-header">
-			<a class="navbar-brand" href="javascript:void(0);">签约协议</a>
-			<a class="navbar-brand active" href="javascript:void(0);">响应邀约</a>
-			<a class="navbar-brand" href="javascript:void(0);">统计情况</a>
-		</nav>
-	</header>
-
-
 	

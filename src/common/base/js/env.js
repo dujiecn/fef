@@ -1,3 +1,6 @@
+/*
+	运行环境
+*/
 define(function(require,exports,module) {
 	var ua = navigator.userAgent;
 

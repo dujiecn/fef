@@ -26,6 +26,7 @@ seajs.config({
 		"loading":"components/loading/loading",
 		"layout":"components/layout/layout",
 		"nav":"components/nav/nav",
+		"popbox":"components/popbox/popbox",
 		/*＝＝＝＝＝＝＝＝公共模块＝＝＝＝＝＝＝*/
 		"request":"base/js/request",
 		"login":"base/js/login"

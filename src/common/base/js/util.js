@@ -1,3 +1,6 @@
+/*
+	工具模块
+*/
 define(function(require,exports,module) {
 	module.exports = {
 		isEmpty:function(str) {

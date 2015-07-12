@@ -1,0 +1,78 @@
+@charset "utf-8";
+@import url("../../base/style/mixins");
+
+.spa-popbox {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0);
+	z-index: 999;
+	.displayFlex();
+	.justifyContent(center);
+	.alignItems(center);
+
+	&.alert .spa-popbox-operate {
+		width: 50%;
+		margin: auto;
+	}
+
+	.spa-popbox-container {
+		.displayFlex();
+		.flexFlow(column nowrap);
+		width: 70%;
+		height: 30%;
+		background-color: #fff;
+		.boxShadow(0px 0px 6px 1px #7A7C7A);
+		
+		&>div {
+			.flex(1);
+		}
+
+		.spa-popbox-title {
+			max-height: 36px;
+			padding: 8px 0;
+			font-size: 2.2rem;
+			text-align: center;
+		}
+
+		.spa-popbox-content {
+			// .displayFlex();
+			// .justifyContent(center);
+			// .alignItems(center);
+
+			.msg {
+				padding: 20px 0;
+				text-align: center;
+			}
+		}
+		
+		.spa-popbox-operate {
+			position: relative;
+			max-height: 50px;
+			.displayFlex();
+			.flexFlow(row nowrap);
+
+			.spa-popbox-button {
+				margin: 10px 5px;
+				padding: 5px 10px;
+				border:1px solid #687;
+				.borderRadius(.2em);
+				.flex(1);
+				.displayFlex();
+				.justifyContent(center);
+				.alignItems(center);
+				.transition(all .3s);
+				color:#000;
+				background-color: #fff;
+
+				&:active {
+					color:#fff;
+					background-color: #36a2cc;
+				}
+			}
+		}
+		
+	}
+}

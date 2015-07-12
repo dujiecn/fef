@@ -1,0 +1,1 @@
+define(function(require){require("./popbox.css");var a=require("./popbox.html");window.alert=function(c,b){1==arguments.length&&(b=c,c="提示"),$(document.body).append(ejs.render(a,{poptype:"alert",title:c,msg:b}))}});

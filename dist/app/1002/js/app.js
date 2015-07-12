@@ -1,1 +1,1 @@
-define(function(require){var a=require("loading");a.open()});
+define(function(){alert("title","msg")});
