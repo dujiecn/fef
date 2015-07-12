@@ -1,0 +1,1 @@
+define(function(require){require("./layout.css");var c=100,a=$(".spa-page"),h=a.length;a.each(function(i){$(this).css("z-index",c+h-i)}).first().css("visibility","visible")});

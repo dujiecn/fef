@@ -1,4 +1,6 @@
 define(function(require,exports,module) {
+	require('./loading.css');
+
 	var loading = {};
 
 	// 加载条状态 0 关闭 1 打开

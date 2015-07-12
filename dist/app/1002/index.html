@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1.0,minimum-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="no">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+	<title>页面模板demo2</title>
+	<link rel="stylesheet" href="../../common/base/style/reset.css">
+	<link rel="stylesheet" href="../../common/base/style/base.css">
+</head>
+<body>
+	<div class="spa-page spa-page-home">
+		<div class="spa-page-body">
+			<!-- 头部 -->
+			<header class="navbar">
+				<nav class="navbar-header">
+					<a class="navbar-brand" href="javascript:void(0);">签约协议</a>
+					<a class="navbar-brand active" href="javascript:void(0);">响应邀约</a>
+					<a class="navbar-brand" href="javascript:void(0);">统计情况</a>
+				</nav>
+			</header>
+			
+			<!-- 内容 -->
+			<div class="spa-page-container spa-scroll">
+				content one
+			</div>
+			<div class="spa-page-container spa-scroll active">
+				content two
+			</div>
+			<div class="spa-page-container spa-scroll">
+				content three
+			</div>
+		</div>
+	</div>
+
+	<div class="spa-page spa-page-devicelist">
+		<div class="spa-page-body">
+			<!-- 头部 -->
+			<header class="navbar">
+				<nav class="navbar-header">
+					<a class="navbar-brand" href="javascript:void(0);">设备列表</a>
+				</nav>
+			</header>
+			
+			<!-- 内容 -->
+			<div class="page-container-navbar spa-scroll">
+				<div class="page-sub-body" id="devicelist">
+				</div>
+			</div>
+
+			<div class="back"></div>
+		</div>
+	</div>
+
+
+
+
+
+
+	<script src="../../common/lib/seajs/sea.js" id="seajsnode"></script>
+	<script src="../../common/base/js/config.js"></script>
+	<script>
+		// 页面必须加载的组件：layout loading(loading在js里面自己使用)
+		seajs.use("jquery", function() {
+			// 先加载必须的模块，然后在回调里面登录
+			seajs.use([
+				"seajs-css",
+				"seajs-text", 
+				"seajs-log", 
+				"ejs", 
+				"layout", 
+				"nav"
+			],function() {
+				seajs.use(['login'],function(login) {
+					login(function() {
+						seajs.use(APP_PATH + 'js/app');
+					});
+				});
+			});
+		});
+
+
+		
+	</script>
+</body>
+</html>

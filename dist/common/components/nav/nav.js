@@ -1,0 +1,1 @@
+define(function(require){require("./nav.css");var a=$(".navbar-brand"),v=require("hammer");a.each(function(i,c){var C=new v(c);C.on("tap",function(){var v=a.eq(i).parents(".spa-page-body").find(".spa-page-container");v.removeClass("active"),v.eq(i).addClass("active"),a.removeClass("active"),a.eq(i).addClass("active")})})});

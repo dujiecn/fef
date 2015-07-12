@@ -16,58 +16,6 @@
 	-webkit-overflow-scrolling: touch;
 }
 
-/*加载效果*/
-.spa-loader {
-	display: none;
-	position: absolute;
-	top:0;
-	right:0;
-	bottom:0;
-	left: 0;
-	text-align: center;
-	background-color: rgba(0,0,0,0.5);
-	overflow: hidden;
-	z-index: 999;
-
-	.spa-loader-animate {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-
-		.bg {
-			position: absolute;
-			width: 64px;
-			height: 64px;
-			margin: 0 auto;
-			top:-32px;
-			left: -32px;
-			.borderRadius(50%);
-			background-color: #2C3E50;
-			opacity: 0.5;
-		}
-
-		.ball {
-			display: block;
-			float: left;
-			padding: 8px;
-			margin-top: -8px;
-			margin-left: -10px;
-			.borderRadius(50%);
-			.transform(translate(0,0));
-
-			&:nth-child(2) {
-				background-color: #16A085;
-				.animation(move-left 800ms ease-in-out infinite alternate);
-			}
-
-			&:nth-child(3) {
-				background-color: #E67E22;
-				.animation(move-right 800ms ease-in-out infinite alternate);
-			}
-		}
-	}
-}
-
 .spa-show {
 	display: block;
 }
@@ -76,6 +24,11 @@
 	display: none;
 }
 
+// 默认的页面样式，为何在这里写不在layout。css里面写；原因是：
+// layout。css由js加载，而js是在页面构造树之后才加载，会有短暂的页面间切换闪烁问题
+.spa-page {
+	visibility: hidden;//默认隐藏page页面，由layout。js控制显示
+}
 
 @-webkit-keyframes move-right {
 	to {

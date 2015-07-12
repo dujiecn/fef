@@ -24,17 +24,18 @@ seajs.config({
 		"d3":"lib/d3/d3.min",
 		/*＝＝＝＝＝＝＝＝组件＝＝＝＝＝＝＝＝＝*/
 		"loading":"components/loading/loading",
+		"layout":"components/layout/layout",
+		"nav":"components/nav/nav",
 		/*＝＝＝＝＝＝＝＝公共模块＝＝＝＝＝＝＝*/
 		"request":"base/js/request",
-		"layout":"base/js/layout",
-		"base":"base/js/base",
 		"login":"base/js/login"
 	}
 });
 
-seajs.use("jquery",function() {
-	seajs.use(["seajs-css","seajs-text","seajs-log","ejs","base"]);
-});
+// // 页面必须加载的组件：layout loading(loading在js里面自己使用)
+// seajs.use("jquery",function() {
+// 	seajs.use(["seajs-css","seajs-text","seajs-log","ejs","layout","nav"]);
+// });
 
 
 
