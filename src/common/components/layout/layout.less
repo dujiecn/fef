@@ -41,52 +41,6 @@ body {
 		.backfaceVisibility();
 		.transform(translateZ(0));	
 
-		
-		// 头部导航
-		.navbar {
-			position: relative;
-			min-height: 39px;
-			height: @headerHeight;
-			background-color: #f8f8f8;
-			.boxShadow(0px 0px 6px 0 rgba(0,0,0,0.5));
-			z-index: 100;
-
-			.navbar-header {
-				height: 100%;
-				.displayFlex();
-				.flexFlow(row nowrap);
-
-				.navbar-brand {
-					position: relative;
-					.flex(1);
-					min-width: 80px;
-					text-align: center;
-					line-height: @headerHeight;
-
-					&.active {
-						@lineHeight:2px;
-						&:before {
-							position: absolute;
-							right: 0;
-							bottom: 0;
-							left: 0;
-							height: @lineHeight;
-							background-color: #36a2cc;
-						}
-
-						&:after {
-							position: absolute;
-							border:3px solid transparent;
-							border-bottom-color: #36a2cc;
-							bottom: @lineHeight;
-							left: 50%;
-							.transform(translateX(-50%));
-						}
-					}
-				}
-			}
-		}
-
 
 		// 内容区域
 		.spa-page-container {
