@@ -28,7 +28,7 @@ define(function(require, exports, module) {
 				}));
 			} else {
 				// 移动端
-				native.sendDataToNative({
+				request.send2native({
 					version: 1,
 					errorCb: "getLoginInfo",
 					successCb: "getLoginInfo",

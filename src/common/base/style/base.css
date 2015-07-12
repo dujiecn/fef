@@ -1,4 +1,116 @@
 @charset "utf-8";
-html {
-  font-size: 40px;
+/*页面公共的样式*/
+.clearfix:after {
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+}
+.spa-scroll {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+/*加载效果*/
+.spa-loader {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  z-index: 999;
+}
+.spa-loader .spa-loader-animate {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.spa-loader .spa-loader-animate .bg {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto;
+  top: -32px;
+  left: -32px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #2C3E50;
+  opacity: 0.5;
+}
+.spa-loader .spa-loader-animate .ball {
+  display: block;
+  float: left;
+  padding: 8px;
+  margin-top: -8px;
+  margin-left: -10px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+.spa-loader .spa-loader-animate .ball:nth-child(2) {
+  background-color: #16A085;
+  -webkit-animation: move-left 800ms ease-in-out infinite alternate;
+  -moz-animation: move-left 800ms ease-in-out infinite alternate;
+  animation: move-left 800ms ease-in-out infinite alternate;
+}
+.spa-loader .spa-loader-animate .ball:nth-child(3) {
+  background-color: #E67E22;
+  -webkit-animation: move-right 800ms ease-in-out infinite alternate;
+  -moz-animation: move-right 800ms ease-in-out infinite alternate;
+  animation: move-right 800ms ease-in-out infinite alternate;
+}
+.spa-show {
+  display: block;
+}
+.spa-hide {
+  display: none;
+}
+@-webkit-keyframes move-right {
+  to {
+    -webkit-transform: translate(-20px, 0);
+    -moz-transform: translate(-20px, 0);
+    transform: translate(-20px, 0);
+    background-color: #44bbcc;
+  }
+}
+@keyframes move-right {
+  to {
+    -webkit-transform: translate(-20px, 0);
+    -moz-transform: translate(-20px, 0);
+    transform: translate(-20px, 0);
+    background-color: #44bbcc;
+  }
+}
+@-webkit-keyframes move-left {
+  to {
+    -webkit-transform: translate(20px, 0);
+    -moz-transform: translate(20px, 0);
+    transform: translate(20px, 0);
+    background-color: #e85932;
+  }
+}
+@-webkit-keyframes move-left {
+  to {
+    -webkit-transform: translate(20px, 0);
+    -moz-transform: translate(20px, 0);
+    transform: translate(20px, 0);
+    background-color: #e85932;
+  }
+}
+.spa-fullscreen {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+  z-index: -1;
+  overflow: hidden;
 }

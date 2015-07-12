@@ -1,4 +1,105 @@
 @charset "utf-8";
+/*页面整体布局样式*/
+html {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
 body {
-  color: #000;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  font-size: 1.4rem;
+  background-color: #eee;
+  overflow: hidden;
+}
+.spa-page {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #eee;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.spa-page .spa-page-body {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.spa-page .spa-page-body .navbar {
+  position: relative;
+  min-height: 39px;
+  height: 46px;
+  background-color: #f8f8f8;
+  -webkit-box-shadow: 0px 0px 6px 0 rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 6px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 6px 0 rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+.spa-page .spa-page-body .navbar .navbar-header {
+  height: 100%;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -moz-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+}
+.spa-page .spa-page-body .navbar .navbar-header .navbar-brand {
+  position: relative;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  flex: 1;
+  min-width: 80px;
+  text-align: center;
+  line-height: 46px;
+}
+.spa-page .spa-page-body .navbar .navbar-header .navbar-brand.active:before {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background-color: #36a2cc;
+}
+.spa-page .spa-page-body .navbar .navbar-header .navbar-brand.active:after {
+  position: absolute;
+  border: 3px solid transparent;
+  border-bottom-color: #36a2cc;
+  bottom: 2px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.spa-page .spa-page-body .page-container-navbar {
+  position: absolute;
+  top: 46px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.spa-page .spa-page-body .page-container-navbar .container {
+  padding: 5px 8px;
 }

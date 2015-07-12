@@ -1,4 +1,125 @@
+/*页面公共的样式*/
 @charset "utf-8";
-html {
-	font-size: 40px;
+
+@import (less) url("./mixins");
+
+.clearfix:after {
+	display: block;
+	height: 0;
+	overflow: hidden;
+	clear: both;
 }
+
+
+.spa-scroll {
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+/*加载效果*/
+.spa-loader {
+	display: none;
+	position: absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left: 0;
+	text-align: center;
+	background-color: rgba(0,0,0,0.5);
+	overflow: hidden;
+	z-index: 999;
+
+	.spa-loader-animate {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+
+		.bg {
+			position: absolute;
+			width: 64px;
+			height: 64px;
+			margin: 0 auto;
+			top:-32px;
+			left: -32px;
+			.borderRadius(50%);
+			background-color: #2C3E50;
+			opacity: 0.5;
+		}
+
+		.ball {
+			display: block;
+			float: left;
+			padding: 8px;
+			margin-top: -8px;
+			margin-left: -10px;
+			.borderRadius(50%);
+			.transform(translate(0,0));
+
+			&:nth-child(2) {
+				background-color: #16A085;
+				.animation(move-left 800ms ease-in-out infinite alternate);
+			}
+
+			&:nth-child(3) {
+				background-color: #E67E22;
+				.animation(move-right 800ms ease-in-out infinite alternate);
+			}
+		}
+	}
+}
+
+.spa-show {
+	display: block;
+}
+
+.spa-hide {
+	display: none;
+}
+
+
+@-webkit-keyframes move-right {
+	to {
+		.transform(translate(-20px,0));
+		background-color: #44bbcc;
+	}
+}
+
+@keyframes move-right {
+	to {
+		.transform(translate(-20px,0));
+		background-color: #44bbcc;
+	}
+}
+
+@-webkit-keyframes move-left {
+	to {
+		.transform(translate(20px,0));
+		background-color: #e85932;
+	}
+}
+
+@-webkit-keyframes move-left {
+	to {
+		.transform(translate(20px,0));
+		background-color: #e85932;
+	}
+}
+
+.spa-fullscreen {
+	position: absolute;
+	top:0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	visibility: hidden;
+	z-index: -1;
+	overflow: hidden;
+}
+
+
+
+
+
+
+
+
