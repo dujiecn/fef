@@ -46,6 +46,9 @@ table {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
   font-weight: lighter;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 *:before,
 *:after {
