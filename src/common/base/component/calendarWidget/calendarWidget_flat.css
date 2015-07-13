@@ -1,0 +1,40 @@
+/*body {
+	background-color: rgb(64,62,73);
+}*/
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot?-xpmxys');
+	src:url('fonts/icomoon.eot?#iefix-xpmxys') format('embedded-opentype'),
+		url('fonts/icomoon.woff?-xpmxys') format('woff'),
+		url('fonts/icomoon.ttf?-xpmxys') format('truetype'),
+		url('fonts/icomoon.svg?-xpmxys#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.u-icalendar-wrapper * {-webkit-box-sizing: border-box;font-size: 12px; -webkit-user-select:none;user-select: none;cursor: default;color:rgb(178, 182, 186);}
+.u-icalendar-wrapper {border-radius: 5px;overflow: hidden;}
+
+.u-icalendar-wrapper .header {position: relative;}
+.u-icalendar-wrapper .header td {position: relative;width: 33.3%;}
+.u-icalendar-wrapper .header td:first-child:before{content:"\ea38";font-family: 'icomoon';}
+.u-icalendar-wrapper .header td:nth-child(2) {font-size: 16px; transition:all .6s ease;-webkit-transition:all .6s ease;opacity: 1;}
+.u-icalendar-wrapper .header td:last-child:before{content:"\ea34";font-family: 'icomoon';}
+.u-icalendar-wrapper .header .hide {visibility: hidden;}
+
+.u-icalendar-wrapper table {position: absolute;top:0;left:0;opacity: 1; border-spacing: 0px;border-collapse: collapse;width:99.9%;height: 100%;text-align: center;vertical-align: middle;
+	transition:all .4s ease;transform-origin:0 0;-webkit-transition:all .4s ease;-webkit-transform-origin:0 0;}
+
+.u-icalendar-wrapper .content {position: relative;overflow: hidden;}
+.u-icalendar-wrapper .content table td {position: relative;background-color: rgb(64,62,73);}
+.u-icalendar-wrapper .content table tr:nth-child(n+2) td:not(.hasDate) {color:rgb(190, 190, 190);}
+.u-icalendar-wrapper .content table td.hasDate.mark:before {content:"";position: absolute;top:0;right: 0;
+	border-width: 5px;border-style: solid;border-color: rgb(49,214,197) rgb(49,214,197) transparent transparent;}
+.u-icalendar-wrapper .content table td.hasDate.now {background-color: rgb(47, 92, 151);}
+.u-icalendar-wrapper .content table td.hasDate.now,
+.u-icalendar-wrapper .content table td.hasDate.now span {color: #fff;}
+.u-icalendar-wrapper .content table td>span {text-align: left;display: block;width: 50%;margin: auto;text-align: center;}
+
+
+

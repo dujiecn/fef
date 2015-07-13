@@ -1,0 +1,25 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+	#labelMain {
+		width: 380px;
+		height: 200px;
+		margin: 50px auto;
+	}
+	</style>
+	<link rel="stylesheet" href="labelWidget.css">
+</head>
+<body>
+	<div id="labelMain"></div>
+
+
+	<script src="../../seajs/sea.js"></script>
+	<script>
+		seajs.use(["../../component/labelWidget/labelWidget","../../jquery/jquery"],function(label) {
+			new label.LabelPanel("#labelMain",["aaaaa","bbbb"]).init();
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+
+<body>
+<div class="main" style="height: 300px;border: 1px solid;">
+
+</div>
+<script src="../src/sea.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    var option = {
+        title: {
+            text: '未来一周气温变化',
+            subtext: '纯属虚构'
+        },
+        legend: {
+            data: ['最高气温', '最低气温', '最高气温2']
+        },
+        animation: {
+            // show: false
+        },
+        pageline: {
+            cursorShow: true,
+            pageviewShow: true,
+            //					selected: '2',
+            type: 'number',
+            pageSize: 2,
+            // capacity:10,
+            position: 'bottom',
+            reversal: false,
+            top: 20,
+            bottom: 10,
+            boderColor: 'red',
+            backgroundColor: 'white',
+            pagePreview: {}
+        },
+        tooltip: {
+            trigger: 'axis',
+            pointer: {
+//                 type: 'shadow'
+            }
+        },
+        toolbox: {
+//            show: true,
+            tool: {
+                refresh: {
+                    show: true,
+                    lineStyle: {}
+                },
+                restore: {
+                    show: true
+                }
+            }
+        },
+        xAxis: [{
+            name: '一周',
+            type: 'category',
+            // step: 1,
+            tick: { // 标尺线样式
+                type: 'line', // circle,line
+                offset: {
+                    x: 0,
+                    y: 0
+                }
+            },
+            data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日', '周二', '周三', '周四', '周五', '周六', '周日']
+        }],
+        yAxis: [{
+            name: '温度',
+            type: 'value',
+            markLine: [{
+                value: 0
+            }]
+        }],
+        series: [
+
+            {
+                name: '最低气温',
+                type: 'line',
+                area: true,
+                smooth: false,
+                label: {
+                    formatter: function (a) {
+                        return a + '';
+                    }
+                },
+                stack: 'a',
+                data: [20, 200, 28, 456, '-', -33, -16, 22, -33, -16, 20, 200, 160]
+            }
+
+            , {
+                name: '最高气温',
+                type: 'line',
+                smooth: false,
+
+                label: {
+                    formatter: function (a) {
+                        return a + '';
+                    }
+                },
+                stack: 'a',
+                data: [-50, 9, 210, 22, 89, 55, -2,-50, 9, 210, 22, 89, 55]
+            }
+
+
+            , {
+                name: '最高气温2',
+                type: 'line',
+                label: {
+                    formatter: function (a) {
+                        return a + '';
+                    }
+                },
+                stack: 'a',
+                data: [-40, 9, 75, 22, '-', 55, -2]
+            }
+
+        ]
+    };
+
+
+    seajs.use('../src/charts', function (c) {
+        var chart = c.init('.main'); // macarons
+        chart.setOption(option);
+    });
+</script>
+</body>
+
+</html>

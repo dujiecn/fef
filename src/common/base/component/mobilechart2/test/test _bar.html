@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+
+<body>
+<div class="main" style="height: 390px;border: 1px solid;">
+
+</div>
+<script src="../src/sea.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    var option = {
+        title: {
+            text: '未来一周气温变化',
+            subtext: '纯属虚构'
+        },
+        tooltip: {
+            trigger: 'item'
+        },
+        animation:{
+            show:false
+        },
+        legend: {
+            show: true,
+            //					borderWidth: 2,
+            //					borderColor: "red",
+            padding: [5, 10],
+            itemGap: 5,
+            x: "center",
+            y: "top",
+            textStyle: {
+                color: 'maroon'
+            },
+            orientation: "horizontal",
+            data: ['最低气温', '最高气温','最高气温2']
+        },
+        pageline: {
+            cursorShow: true,
+            pageviewShow: true,
+            //					selected: '2',
+            type: 'number',
+            pageSize: 5,
+            // capacity:10,
+            position: 'bottom',
+            reversal: false,
+            top: 20,
+            bottom: 10,
+            boderColor: 'red',
+            backgroundColor: 'white',
+            pagePreview: {}
+        },
+        animation: {
+            // show:false
+        },
+        toolbox: {
+            show: true,
+            tool: {
+                refresh: {
+                    show: true,
+                    lineStyle: {}
+                },
+                restore: {
+                    show: true
+                }
+            }
+        },
+        xAxis: [{
+            name: '一周',
+            type: 'category',
+            data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+        }],
+        yAxis: [{
+            name: '温度',
+            type: 'value',
+            axisLabel: {}
+        }],
+        series: [
+            {
+                name: '最低气温',
+                type: 'bar',
+                stack: 'a',
+                data: [11, 11, 22, 13, 12, 13, -5]
+            }
+
+            , {
+                name: '最高气温',
+                type: 'bar',
+                data: [11, 11, 15, 13, 12, 13, 10]
+            }
+//
+//
+            , {
+                name: '最高气温2',
+                type: 'bar',
+                stack: 'a',
+                data: [11, 11, 15, 13, 12, 13, 10]
+            }
+
+
+        ]
+    };
+    seajs.use('../src/charts', function (c) {
+        var chart = c.init('.main'); // macarons
+        chart.setOption(option);
+    });
+</script>
+</body>
+
+</html>

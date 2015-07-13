@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+
+<body>
+<div class="main" style="height: 300px;border: 1px solid;">
+
+</div>
+<script src="../src/sea.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    //			option = {
+    //			    title : {
+    //			        text: '罗纳尔多 vs 舍普琴科',
+    //			        subtext: '完全实况球员数据'
+    //			    },
+    //			    tooltip : {
+    //			        trigger: 'item'
+    //			    },
+    //			    legend: {
+    //			        x : 'right',
+    //					y: 'bottom',
+    //					orientation: 'horizontal',
+    //			        data:['罗纳尔多',
+    //			        {
+    //			        	'name':'舍普琴科',
+    //						style: {
+    //							normal: {
+    //								color: "red"
+    //							}
+    //						}
+    //			        }]
+    //			    },
+    //			    toolbox: {
+    //			        show : true,
+    //			        feature : {
+    //			            mark : {show: true},
+    //			            dataView : {show: true, readOnly: false},
+    //			            restore : {show: true},
+    //			            saveAsImage : {show: true}
+    //			        }
+    //			    },
+    //			    calculable : true,
+    //			    polar : [
+    //			        {
+    //			            indicator : [
+    //			                {text : '进攻', max  : 100},
+    //			                {text : '防守', max  : 100},
+    //			                {text : '体能', max  : 100},
+    //			                {text : '速度', max  : 100},
+    //			                {text : '力量', max  : 100},
+    //			                {text : '技巧', max  : 100},
+    //                            {text : '体重', max  : 100}
+    //			            ],
+    //			            radius : 120,
+    //			            splitLine:{
+    //			            	show:true
+    //			            },
+    //			            splitArea:{
+    //			            	show:true
+    //			            },
+    //			            textStyle:{
+    //				        	color:'balck',
+    //				        	textFont: '11px Arial'
+    //				        },
+    //				        type:'polygon' //'polygon'
+    //			        }
+    //			    ],
+    //			    series : [
+    //			        {
+    //			            name: '完全实况球员数据',
+    //			            type: 'radar',
+    //			            itemStyle: {
+    //			                normal: {
+    //			                    areaStyle: {
+    //			                        type: 'default'
+    //			                    }
+    //			                }
+    //			            },
+    //			            data : [
+    //			                {
+    //			                    value : [97, 42, 88, 94, 90],
+    //			                    name : '舍普琴科'
+    //			                },
+    //			                {
+    //			                    value : [97, 32, 74, 95, 88, 92],
+    //			                    name : '罗纳尔多'
+    //			                }
+    //			            ]
+    //			        }
+    //			    ]
+    //			};
+
+
+    option = {
+        title: {
+            text: '预算 vs 开销（Budget vs spending）',
+            subtext: '纯属虚构'
+        },
+        tooltip: {
+//            trigger: 'axis'
+//            trigger:'item'
+        },
+        legend: {
+            orient: 'vertical',
+            x: 'right',
+            y: 'bottom',
+            data: ['预算分配（Allocated Budget）', '实际开销（Actual Spending）']
+        },
+        toolbox: {
+            show: true,
+            feature: {
+                mark: {show: true},
+                dataView: {show: true, readOnly: false},
+                restore: {show: true},
+                saveAsImage: {show: true}
+            }
+        },
+        polar: [
+            {
+                indicator: [
+                    {text: '销售（sales）', max: 6000},
+                    {text: '管理（Administration）', max: 16000},
+                    {text: '信息技术（Information Techology）', max: 30000},
+                    {text: '客服（Customer Support）', max: 38000},
+                    {text: '研发（Development）', max: 52000},
+                    {text: '市场（Marketing）', max: 25000}
+                ]
+            }
+        ],
+        calculable: true,
+        series: [
+            {
+                name: '预算 vs 开销（Budget vs spending）',
+                type: 'radar',
+//                area:true,
+                data: [
+                    {
+                        value: [4300, 10000, 28000, 35000, 50000, 19000],
+                        name: '预算分配（Allocated Budget）'
+                    }
+                    ,
+                    {
+                        value: [5000, 14000, 28000, 31000, 42000, 21000],
+                        name: '实际开销（Actual Spending）'
+                    }
+                ]
+            }
+        ]
+    };
+
+
+    seajs.use('../src/charts', function (c) {
+        var chart = c.init('.main'); // macarons
+        chart.setOption(option);
+    });
+</script>
+</body>
+
+</html>

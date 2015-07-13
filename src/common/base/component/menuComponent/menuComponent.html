@@ -1,0 +1,32 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Document</title>
+	<link rel="stylesheet" href="../jqm/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" href="../base/base.css">
+	<link rel="stylesheet" href="menuComponent.css">
+	<script src="../jquery/jquery.js"></script>
+	<script src="../jqm/jquery.mobile-1.4.5.min.js"></script>
+	<script src="../seajs/sea.js"></script>
+</head>
+<body>
+	<div data-role="page">
+		<div data-role="header" data-position="fixed">
+			<ul class="g-menu">
+				<li>时间<img src="../../app/1001/res/sqfh.png" width="12px"/></li>
+				<li>地点</li>
+				<li>人物</li>
+			</ul>
+		</div>
+		<div data-role="content"></div>
+		<div data-role="footer" data-position="fixed" id="foot"></div>
+	</div>
+	
+	<script>
+		seajs.use("../component/menuComponent",function(menuComponent) {
+			menuComponent.config(".g-menu");
+		});
+	</script>
+</body>
+</html>

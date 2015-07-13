@@ -1,0 +1,33 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="tabWidget.css">
+	<script src="../../../lib/seajs/sea.js" id="seajsnode"></script>
+</head>
+<body>
+	<div class="main" style="width:300px;height:32px;margin:auto;">
+		<!-- <ul class="u-tab">
+			<li>峰</li>			
+			<li>谷</li>			
+			<li>平</li>			
+			<li>电</li>			
+			<li class="back"></li>		
+		</ul> -->
+	</div>
+	
+
+	<script>
+		seajs.config({
+			base:"../../../",
+			alias : {
+				"jquery" : "lib/jquery/jquery",
+				"tab" : "base/component/tabWidget/tabWidget"
+			}
+		})
+		seajs.use(["tab","jquery"],function(t) {
+			new t.Tab(".main").render(["峰","谷","平","电"]);
+		});
+	</script>
+</body>
+</html>

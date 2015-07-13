@@ -1,0 +1,32 @@
+@charset "UTF-8";
+.u-wrapper-label .u-content-label .u-label {
+	float:left;
+	position: relative;
+	margin: 0px 10px;
+	padding: 10px;
+}
+
+.u-wrapper-label .u-content-label .u-label .text {
+	color:#fff;
+	display: block;
+	min-width: 66px;
+	max-width: 102px;
+	height: 26px;
+	line-height: 26px;
+	background-color: rgba(0,0,0,0.5);
+	border-radius: 2px;
+	padding: 2px;
+	text-align: center;
+}
+
+.u-wrapper-label .u-content-label .u-label .close {
+	position: absolute;
+	top:0px;
+	right: 0px;
+	display: block;
+	width: 19px;
+	height: 19px;
+	border-radius: 10px;
+	background: url("close.png") no-repeat center;
+	background-size: 19px;
+}

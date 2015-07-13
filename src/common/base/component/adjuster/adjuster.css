@@ -1,0 +1,10 @@
+@charset "utf-8";
+.u-adjuster-group {}
+.u-adjuster-group>.u-progress {position: relative;height: 26px;line-height: 26px;}
+.u-adjuster-group progress {width:100%;vertical-align:auto;}
+.u-adjuster-group a {position: absolute;display: block;width: 8px;
+	top:0;bottom:0;left: 0; margin-left: -4px; background-color: #005580;border-radius: 1px;}
+	
+	
+.u-adjuster-group progress::-webkit-progress-bar{background-color:red;}	
+.u-adjuster-group progress::-webkit-progress-value{background-color:#000000;}	

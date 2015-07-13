@@ -1,0 +1,5 @@
+.g-menu {font-size:12px;margin:0px;padding :8px 0px;list-style: none;width:100%; display: -webkit-inline-box;text-align: center;overflow-x: auto; -webkit-overflow-scrolling : touch; }
+.g-menu li {position: relative; height :16px; line-height: 16px;border-right:1px solid #888;overflow: hidden;
+		white-space: nowrap;text-overflow: ellipsis;}
+.g-menu li:last-child {border-right-width: 0px;}
+.g-menu li>img {display: block;position: absolute;top:50%;right: 16px;-webkit-transform:translateY(-50%);}

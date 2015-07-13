@@ -1,0 +1,29 @@
+@charset "utf-8";
+.u-tab {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	/*border:1px solid #C7C2C2;*/
+	position: relative;
+}
+
+.u-tab li {
+	display: table-cell;
+	min-width: 60px;
+	/*height: 38px;*/
+	text-align: center;
+	/*line-height: 38px;*/
+}
+
+.u-tab li.item.active {
+	color:rgb(235,164,56);
+}
+
+.u-tab li.back {
+	box-sizing:border-box;
+	position: absolute;
+	top:0px;
+	left: 0px;
+	border-bottom: 2px solid rgb(235,164,56);
+	-webkit-transition:left .2s linear;
+}

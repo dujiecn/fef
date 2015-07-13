@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+
+	<body>
+		<div class="main" style="height: 300px;border: 1px solid;">
+
+		</div>
+		<script src="../src/sea.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var option = {
+				title: {
+					text: '未来一周气温变化',
+					subtext: '纯属虚构'
+				},
+				grid:{
+				},
+				pageline:{
+					cursorShow:true,
+					pageviewShow:true,
+					selected:'2',
+					type:'number',
+					pageSize:10,
+					// capacity:10,
+					position:'bottom',
+					reversal:false,
+					top:20,
+					bottom:10,
+					boderColor:'red',
+					backgroundColor:'white',
+					pagePreview:{
+					}
+				},
+				
+				legend: {
+					show: false,
+//					borderWidth: 2,
+//					borderColor: "red",
+					padding: [5, 10],
+					itemGap: 5,
+					x: "center",
+					y: "top",
+					orientation: "horizontal",
+					data: ['最高气温', '最高气温2', '最高气温3']
+				},
+				toolbox: {
+					show: true,
+					tool: {
+						refresh: {
+							show: true,
+							lineStyle: {}
+						},
+						restore: {
+							show: true
+						}
+					}
+				},
+
+				xAxis: [{
+					name: '一周',
+					type: 'category',
+					showGroup:'j',
+					data: 
+					[11,2,3,45,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,55]
+					//[{group:'j',value:'一月j'},{group:'b',value:'二月b'},{group:'j',value:'二月j'},{group:'b',value:'二月b'},{group:'aab',value:'二月'},{group:'d',value:'二月'},{group:'a',value:'二月a'},{group:'b',value:'二月b'},{group:'ccccccc',value:'二月ccccccc'}]
+
+				}],
+				yAxis: [{
+					name: '温度',
+					type: 'value'
+				}],
+				series: [
+				// {
+				// 	name: '最高气温',
+				// 	show: true,
+				// 	type: 'bar',
+				// 	stack: 'a',
+				// 	data: [10, 32, 11, 26, '-', '-', -15,-8,22,'-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-']
+				// }
+				// , 
+				{
+					name: '最高气温2',
+					type: 'bar',
+					stack: 'd',
+					data: [99,200,30,50,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29]
+				}
+//				,
+//				{
+//					name: '最高气温3',
+//					type: 'bar',
+//					stack: 'd',
+//					data: [99,200,30,50,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29]
+//				}
+				// , {
+				// 	name: '最高气温3',
+				// 	type: 'bar',
+				// 	stack: 'b',
+				// 	data: [0, 21, 15, 33, 11, 21, -10,'-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-']
+				// }
+				]
+			};
+			seajs.use('../src/charts', function(c) {
+				var chart = c.init('.main'); // macarons
+				chart.setOption(option);
+			});
+		</script>
+	</body>
+
+</html>

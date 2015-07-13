@@ -1,0 +1,55 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="selectControl.css">
+	<script src="../../../lib/seajs/sea.js" id="seajsnode"></script>
+</head>
+<body>
+	<div class="main" style="width:300px;height:480px;margin:auto;" data-select-type="multi">
+	</div>
+	
+	<button id="qd">确 定</button>
+	<button id='qx'>取 消</button>
+	
+	
+
+	<script>
+	seajs.config({
+		base:"../../../",
+		alias : {
+			"jquery" : "lib/jquery/jquery",
+			"iscroll" : "lib/iscroll/iscroll",
+			"select" : "base/component/selectControl/selectControl"
+		}
+	});
+
+	seajs.use(["jquery","iscroll","select"],function(a,b,select) {
+		$.getJSON(
+			"selectControl.json",
+			function(data) {
+				var obj = new select.SelectControl({
+					container:".main",
+					ignoreRootNode:true,
+					type:"multi"
+				}).render(data);
+
+				$("#qd").click(function() {
+					obj.queryCurrentNodes();
+					console.log(obj)
+				});
+
+				$("#qx").click(function() {
+					obj.rollback();
+					console.log(obj)
+				});
+
+			}
+		);
+	});
+
+		
+	</script>
+</body>
+</html>

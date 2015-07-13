@@ -1,0 +1,43 @@
+@charset "utf-8";
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Microsoft YaHei", arial, verdana, sans-serif;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+
+html,body {
+	position: relative;
+	height: 100%;
+	background-color: rgb(64,62,73);
+	color:#fff;
+	overflow: hidden;
+}
+
+/*默认的page样式 无header 无footer*/
+[data-role='page'] {
+	position: absolute;
+	/*height: 100%;*/
+	top:0;
+	bottom:0;
+	left: 0;
+	right:0;
+	overflow-y:auto;
+	-webkit-transition:-webkit-transform .2s cubic-bezier(0.42, 0, 0.58, 1);
+	transition:transform .2s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+
+[data-role='page'].page-footer {bottom:32px;}
+[data-role='footer'] {position: fixed;bottom: 0;left: 0;right: 0;font-size: 13px;
+ 	width: 100%;height: 32px;/*background-color: hsla(0,50%,50%,1);*/}
+[data-role='footer']>ul {display: table;list-style-type: none;text-align: center;
+	width: inherit;height: inherit;}	
+[data-role='footer']>ul>li {display: table-cell;line-height: 30px;border:1px solid rgb(85,79,81);}
+/*[data-role='footer'] ul {list-style-type: none;display: -webkit-box;display: -moz-box;display: box;
+	-webkit-box-orient:horizontal;-moz-box-orient:horizontal;box-orient:horizontal;}*/

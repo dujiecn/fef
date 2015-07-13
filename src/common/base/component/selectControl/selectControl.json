@@ -1,0 +1,96 @@
+{
+	"name": "根节点",
+	"id":1,
+	"children":[{
+		"name": "负荷曲线",
+		"id":2,
+		"children": [{
+			"name": "A相",
+			"id":3,
+			"value": "ax"
+		}, {
+			"name": "B相",
+			"id":4,
+			"value": "bx"
+		}, {
+			"name": "C相",
+			"id":5,
+			"value": "cx"
+		}, {
+			"name": "总负荷",
+			"id":6,
+			"value": "zz"
+		}]
+	}, {
+		"name": "无功功率曲线",
+		"id" :25,
+		"children": [{
+			"name": "A相",
+			"id":7
+		}, {
+			"name": "B相",
+			"id":8
+		}, {
+			"name": "C相",
+			"id":9
+		}, {
+			"name": "总无功功率",
+			"check": true,
+			"id":10
+		}]
+	}, {
+		"name": "功率因数曲线",
+		"id" :26,
+		"children": [{
+			"name": "A相",
+			"id":11
+		}, {
+			"name": "B相",
+			"id":12
+		}, {
+			"name": "C相",
+			"id":13
+		}, {
+			"name": "总功率因数",
+			"id":14
+		}]
+	}, {
+		"name": "电流曲线",
+		"id" :27,
+		"children": [{
+			"name": "A相",
+			"id":15
+		}, {
+			"name": "B相",
+			"id":16
+		}, {
+			"name": "C相",
+			"id":17
+		}, {
+			"name": "零线电流",
+			"id":18
+		}]
+	}, {
+		"name": "电压曲线",
+		"id" :28,
+		"children": [{
+			"name": "A相",
+			"id":19
+		}, {
+			"name": "B相",
+			"id":20
+		}, {
+			"name": "C相",
+			"id":21
+		}, {
+			"name": "Uab",
+			"id":22
+		}, {
+			"name": "Ubc",
+			"id":23
+		}, {
+			"name": "Uca",
+			"id":24
+		}]
+	}]
+}

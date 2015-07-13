@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+
+	<body>
+		<div class="main" style="height: 300px;border: 1px solid;">
+
+		</div>
+		<script src="../src/sea.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			 //			var arr = ['苏州', '南京', '泰州', '无锡', '南通', '扬州'];
+			 //			var arr = ['v', 'g', 'a', 'b', 'z', 'w'];
+			 //			var o = {};
+			 //			for (var i = 0; i < arr.length; i++) {
+			 //				o[arr[i]] = i;
+			 //			}
+			 //			console.log(o);
+			 //			for (var key in o)
+			 //				console.log(key);
+			var option = {
+				title: {
+					text: '未来一周气温变化',
+					subtext: '纯属虚构'
+				},
+				legend: {
+					data: ['最高气温', '最低气温']
+				},
+				animation: {
+					//										show: false
+				},
+				//				pageline: {
+				////					show:true,
+				//					type: 'group',
+				////					pageNum: 1,
+				//					capacity: 2,
+				//					position: 'bottom',
+				//					top: 20,
+				//					bottom: 10,
+				//					borderWidth: 1,
+				//					boderColor: 'red',
+				//					backgroundColor: 'white',
+				//					pagePreview: {
+				//						show: false
+				//					}
+				//				},
+				tooltip: {
+					pointer: {
+						type: 'shadow'
+							//						lineStyle:{
+							//							width:50
+							//						}
+					}
+				},
+				toolbox: {
+					show: true,
+					tool: {
+						refresh: {
+							show: true,
+							lineStyle: {}
+						},
+						restore: {
+							show: true
+						}
+					}
+				},
+				xAxis: [{
+					name: '一周',
+					type: 'category',
+					//					boundaryGap: true,
+					step:1,
+					tick: { // 标尺线样式
+						type: 'line', // circle,line
+						offset: {
+							x: 0,
+							y: 0
+						}
+					},
+					data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+				}],
+				yAxis: [{
+					name: '温度',
+					type: 'value',
+					markLine: [{
+						value: 0
+					}],
+					axisLabel: {
+						//						formatter:function(a) {
+						//							return a + 'ddd';
+						//						}
+					}
+				}],
+				series: [{
+						name: '最低气温',
+						//											show: false,
+						type: 'bar',
+						style: {
+							//							normal: {
+							//								color: '#2ec7c9'
+							//							}
+						},
+						label: {
+							formatter: function(a) {
+								return a + '';
+							}
+						},
+						stack: 'a',
+						data: [20, 6, 28, 56, '-', -33, -16]
+					}, {
+						name: '最高气温',
+						//											show: false,
+						type: 'bar',
+						label: {
+							formatter: function(a) {
+								return a + '';
+							}
+						},
+						stack: 'a',
+						data: [-6, 9, 75, 22, '-', 55, -2]
+					}
+					//				, {
+					//					name: '最高气温2',
+					//					type: 'bar',
+					//					stack: 'b',
+					//					data: [11, 11, -15, 13, 12, 13, -10]
+					//				}, {
+					//					name: '最高气温3',
+					//					type: 'bar',
+					//					stack: 'c',
+					//					data: [11, 11, 15, 13, 12, 13, -10]
+					//				}
+				]
+			};
+			seajs.use('../src/charts', function(c) {
+				var chart = c.init('.main'); // macarons
+				chart.setOption(option);
+			});
+			 //			var s = '#2ec7c9';
+			 //			var s2 = '#2ec';
+			 //			var reg = /^#[0-9a-f]{6}$|^#[0-9a-f]{3}$/i;
+			 //			alert(s.match(reg));
+			 //			alert(s2.match(reg));
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<body>
+<div class="console" style="width:100px;height:80px"></div>	
+<div id="main" style="height:300px;border:1px solid red;display: block;"></div>
+<script src="mobilechart-basic.js"></script>
+<script src="mobilechart-pie.js"></script>
+<script src="mobilechart-radar.js"></script>
+<script src='mobilechart-tools.js'></script>
+<script type="text/javascript">
+new Mobilechart.basic("#main").init(
+	{
+		title: {
+			text: '未来一周气温变化',
+			subText: '纯属虚构',
+			style: {
+				// color:"red"
+			}
+		},
+		grid: {
+			 x:50,
+			 x2:20,
+			 y:70,
+			y2: 30,
+//			show:false,
+			style: {
+				// color:"rgba(255,0,0,1)"
+			}
+		},
+		tip:{
+			showLevel:3
+		},
+		// backgroundColor:"rgba(255,0,0)",
+		toolbox:{
+	        position:'right-center',
+	        // type:'arc',
+	        extension:{
+	            orientation:'right'
+	        },
+	        show:false,
+	        tools:['page','bar','stack','swap','restore','save','line','pie','radar','help','smooth','table']
+	    },
+		legend: {
+			align: "right",
+			show: true,
+			style: {
+				// color:"red"
+			}
+		},
+		calculable: true,
+		animation: {
+			// show: false,
+			// timeout: 2000
+		},
+		xAxis: [{
+			name: "汽车",
+			type: 'category',
+//			 position:"top",
+			// offset:20,
+			page: 2,
+			// step:3,
+			axisLabel: {
+				formatter: '{value} °C'
+			},
+			splitLine: {
+//				 show:false,
+				style: {
+					// color:"gray",
+					type: "dotted"
+				}
+			},
+			style: {
+
+				lineStyle: {
+					// width:2
+				}
+			},
+			click:function() {
+				console.log(arguments);	
+			},
+			data: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+			// data : [
+			//               "2013/1/24", "2013/1/25", "2013/1/28", "2013/1/29", "2013/1/30",
+			//               "2013/1/31", "2013/2/1", "2013/2/4"
+			//           ]
+		}],
+		yAxis: [{
+			name: "容量",
+			type: 'value',
+			precision: 2,
+//			 position: "right",
+			// position: "bottom",
+			zeroLine: {
+				show: true,
+				style: {
+					// color:'blue',
+					width: 1
+				}
+			},
+			splitLine: {
+//				 show:false,
+				 style:{
+//				 color:"gray",
+//				 width:2
+				 }
+			},
+			style: {
+				lineStyle: {
+					// width:1	
+				}
+			},
+			axisLabel: {
+//				 formatter: function(a) {
+//				 	return a;
+//				 }
+//				 formatter:"{value}"
+				offset:{
+					x:20,
+					y:0
+				},
+				rotate:-45,
+			}
+		}
+
+		// , {
+		// 	name: "温度",
+		// 	type: 'value',
+		// 	// precision: 2,
+		// 	// position: "right",
+		// 	// position: "top",
+		// 	zeroLine: {
+		// 		show: true,
+		// 		style: {
+		// 			// color:'red',
+		// 			width: 1
+		// 		}
+		// 	},
+//		 	splitLine: {
+		 		// show:true,
+		 		// style:{
+		 		// color:"gray",
+		 		// width:2
+		 		// }
+//		 	}
+		// 	style: {
+		// 		lineStyle: {
+		// 			width: 1,
+		// 			// color:"red"	
+		// 		}
+		// 	},
+		// 	axisLabel: {
+		// 		formatter: '{value} °C'
+		// 	}
+		// }
+
+
+		],
+		series: [
+
+			// ,
+//			 {
+//			     name: '最高气温最高气温2',
+//			     type: 'line',
+//			     stack: "a",
+//			     smooth:true,
+//			     xAxisIndex:1,
+////			     yAxisIndex:1,
+////			     style:{
+////			     	shadowStyle:{
+////			     		x:10,
+////			     		y:10,
+////			     		color:"rgba(112,112,112,1)"
+////			     	}
+////			     },
+//			     data: // 开盘，收盘，最低，最高
+//			         [0,2291.3,1000.26,2308.38,2320.26,569.5,5000.35,2346.92]
+//			 }
+//			,
+
+			 {
+			 	name: '最高气温4',
+			 	type: 'line',
+			 	xAxisIndex : 0,
+			 	joint:true,
+			 	click:function() {
+			 		console.log(arguments);	
+			 	},
+//			 	data: [1, 5, 4, 7, 8, 2, 3, 5, 1, 7, 4, 7, 8, 2, 3, 5, 1, -7]
+				data: [0, 38, -70.02, 2.65, 7.76,-4.36, 5.12, -3.07, -4.77, -1.82, 0.10, 5.84]
+			 }
+//			 , 
+//			 {
+//			 	name: '最高气温1',
+//			 	type: 'bar',
+//			 	xAxisIndex : 0,
+//			 	data: [1, 5, 4, 7, 8, 2, 3, 5, 1, 7, 4, 7, 8, 2, 3, 5, 1, 7]
+//			 }
+//			 ,
+//			 {
+//			 	name: '最高气温2',
+//			 	type: 'line',
+//			 	xAxisIndex : 0,
+//			 	data: [-1, 5, 4, 7, 8, 2, -3, 5, 1, -7, 4, 7, 8, 2, 3, 5, 1, -7]
+//			 }
+
+			// , {
+			// 	name: '最高气温3',
+			// 	type: 'bar',
+			// 	xAxisIndex : 0,
+			// 	data: [1, -5, 4, 7, 8, 2, 3, 5, 1, 7, 4, 7, 8, 2, 3, 5, 1, 7]
+			// }
+
+
+			// ,
+//			{
+//				name: '最高气温5',
+//				type: 'k',
+//				stack: "a",
+//				gravity: 0.2,
+//				// yAxisIndex: 1,
+//				data: [ // 开盘，收盘，最低，最高
+//					[2300.35, 2200.33, null, null],
+//					[2300.35, 2400.36, 2000.3, 2500.38],
+//					[2295.35, 2346.5, 2200.33, 2400.36],
+//					[2347.22, 2358.98, 2337.35, 2363.8],
+//					[2360.75, 2382.48, 2347.89, 2383.76],
+//					[2383.43, 2385.42, 2371.23, 2391.82],
+//					[2377.41, 2419.02, 2369.57, 2421.15],
+//					[2425.92, 2428.15, 2417.58, 2440.38],
+//					[2300.35, 2200.33, 2100.3, 2400.36],
+//					[2300.35, 2400.36, 2000.3, 2500.38],
+//					[2295.35, 2346.5, 2200.33, 2400.36],
+//					[2347.22, 2358.98, 2337.35, 2363.8],
+//					[2360.75, 2382.48, 2347.89, 2383.76],
+//					[2383.43, 2385.42, 2371.23, 2391.82],
+//					[2377.41, 2419.02, 2369.57, 2421.15],
+//					[2360.75, 2382.48, 2347.89, 2383.76],
+//					[2383.43, 2385.42, 2371.23, 2391.82],
+//					[2377.41, 2419.02, 2369.57, 2421.15]
+//				]
+//			}
+
+
+		]
+	}
+);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<body>
+<div class="console" style="width:100px;height:80px"></div>	
+<div id="main" style="height:400px; border:1px solid black;"></div>
+<script src="mobilechart-tools.js"></script>
+<script src="mobilechart-basic.js"></script>
+<script src="mobilechart-rose.js"></script>
+<script type="text/javascript">
+
+var mobilechart = new  Mobilechart.rose(document.getElementById("main")).init({
+	title: {
+		text: '未来一周气温变化',
+		subText: '纯属虚构'
+	},
+	grid: {
+		y2: 0,
+		x2:40,
+		style:{
+		}
+	},
+	tooltip: {
+		trigger: 'axis'
+	},
+	legend: {
+		align:"left",
+		show:true,
+		style:{
+			// color:"red"
+		}
+	},
+ toolbox:{
+            position:'right-center',
+            // type:'arc',
+            extension:{
+                orientation:'right'
+            },
+            tools:['zoom','smooth','line','bar','stack','page','swap','restore']
+            // 'line-bar','bar-line','stack',
+            // tools:['bar-line','swap']
+        },
+    backgroundColor:'white',
+	animation: {
+		show: true,
+		timeout: 2000
+	},
+  	 series : [
+
+        {
+            show:true,
+            name:'半径模式',
+            type:'pie',
+            radius : 80,
+            center : [0.6, 0.4],
+            roseType : 'radius',
+            text:true,
+            cursor:true,
+            // itemStyle :　{
+            //     normal : {
+            //         label : {
+            //             show : false
+            //         },
+            //         labelLine : {
+            //             show : false
+            //         }
+            //     },
+            //     emphasis : {
+            //         label : {
+            //             show : true
+            //         },
+            //         labelLine : {
+            //             show : true
+            //         }
+            //     }
+            // },
+            data:[
+                {value:5, name:'rose1'},
+                {value:5, name:'rose2'},
+                {value:15, name:'rose3'},
+                {value:25, name:'rose4'},
+                {value:33, name:'rose5'},
+                {value:35, name:'rose6'},
+                {value:30, name:'rose7'},
+                {value:40, name:'rose8'}
+            ]
+        }
+
+        ,
+        {
+            show:false,
+            name:'面积模式',
+            type:'pie',
+            radius : [20, 120],
+            center : [0.5, 170],
+            roseType : 'radius',
+             cursor:true,
+            data:[
+                {value:10, name:'rose1'},
+                {value:5, name:'rose3'},
+                {value:15, name:'rose2'},
+                {value:25, name:'rose4'},
+                {value:23, name:'rose5'},
+                {value:35, name:'rose6'},
+                {value:26, name:'rose7'},
+                {value:34, name:'rose8'}
+            ]
+        }
+    ]
+});
+
+</script>
+
+
+<!-- <button onclick='mobilechart.saveAsImage()'> 11</button> -->
+<div>
+</div>
+</body>
+</html>
