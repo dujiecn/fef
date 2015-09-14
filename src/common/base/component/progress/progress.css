@@ -1,4 +1,0 @@
-.u-progress-container .progress {position: absolute;top: 0px;width:0px;height: 3px;
-		/*background:-webkit-gradient(linear,60% 50%,100% 50%,from(#6DC6F0),to(#D2D8D8));*/
-		background:-webkit-gradient(linear,10% 10%,100% 100%,color-stop(0.14,#35b550),color-stop(0.5,#8aca8c),color-stop(1,#CAEC3F));
-		border-radius: 3px;opacity: 1;-webkit-transition:width .6s, opacity .3s;z-index: 99;}
